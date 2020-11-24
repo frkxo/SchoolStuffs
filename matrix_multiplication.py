@@ -67,13 +67,3 @@ if __name__ == "__main__":
     printtMatrices(B, row2, col2)
 
     multiplyMatrices(row1, col1, A, row2, col2, B)
-
-
-
-        
-
-
-
-
-
-
