@@ -21,7 +21,7 @@ if(s == 1):
     #for matrix multiplication
     def multiplyMatrices(row1, col1, A,
                         row2, col2, B):
-        C = [[0 for i in range(MAX)] for j in range(MAX)]
+        C = [[i for i in range(MAX)] for j in range(MAX)]
 
         #checking the multiplication is possible
         if(row2 != col1):
@@ -41,9 +41,9 @@ if(s == 1):
     #the main code
     if __name__ == "__main__":
 
-        A = [[0 for i in range(MAX)]
+        A = [[i for i in range(MAX)]
                 for j in range(MAX)]
-        B = [[0 for i in range(MAX)]
+        B = [[i for i in range(MAX)]
                 for j in range(MAX)]
 
         #First matrix input
@@ -81,7 +81,7 @@ elif(s == 2):
     rows = int(input("Enter the number of rows: "))
     cols = int(input("Enter the number of columns:"))
 
-    F = [[0 for i in range(rows)]
+    F = [[i for i in range(rows)]
             for j in range(cols)]
 
     #matrix component from user
@@ -95,7 +95,7 @@ elif(s == 2):
     for f in F:
         print(f)
 
-    result = [[0 for i in range(rows)] for j in range(cols)]
+    result = [[i for i in range(rows)] for j in range(cols)]
 
     #transpose time
     for r in range(rows):
