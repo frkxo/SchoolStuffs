@@ -1,12 +1,12 @@
 '''
     author: Frrkxo
-    created: 25.11.2020
+    created: 07.12.2020
 '''
 import numpy as np
+import sys
 
-s = int(input("For multiply two matrices press 1, for transpose a matrix press 2 ==>"))
+s = int(input("For multiply two matrices press 1, for transpose a matrix press 2, for determinant a matrix press 3 ==>"))
  
-
 if(s == 1):
     MAX = 100
 
@@ -17,10 +17,9 @@ if(s == 1):
 
             print()                             #jump to another line
 
-
     #for matrix multiplication
     def multiplyMatrices(row1, col1, A,
-                        row2, col2, B):
+                         row2, col2, B):
         C = [[i for i in range(MAX)] for j in range(MAX)]
 
         #checking the multiplication is possible
@@ -107,5 +106,29 @@ elif(s == 2):
         print(r)
 
 
+elif(s == 3):
+    rows = int(input("Enter the number of rows: "))
+    cols = int(input("Enter the number of columns: "))
+
+    if(rows != cols):
+        print("Please enter NxN Matrix!!!")
+        sys.exit(0)
+
+    M = [[i for i in range(rows)]
+            for j in range(cols)]
+
+    #matrix components
+    print("Enter the elements of Matrix: ")
+    for i in range(rows):
+        for j in range(cols):
+            M[i][j] = int(input("A[" + str(i) + "][" + str(j) + "]: "))
+
+    #the matrix
+    print("<------Your Matrix is------>")
+    for m in M:
+        print(m)
+     
+    print(np.linalg.det(M))
+        
 else:
     print("Enter a valid value to make computation!!!")    
