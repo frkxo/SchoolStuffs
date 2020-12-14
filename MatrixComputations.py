@@ -128,7 +128,7 @@ elif(s == 3):
     for m in M:
         print(m)
      
-    print(np.linalg.det(M))
+    print(round(np.linalg.det(M)))
         
 else:
     print("Enter a valid value to make computation!!!")    
